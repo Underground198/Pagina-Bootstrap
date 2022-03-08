@@ -54,9 +54,10 @@ table{
     position: relative;
 }
 
-.titulo-blanco{
-
-}
-.texto-blanco{
+/*.titulo-blanco{ 
     
+} */
+
+.texto-blanco{
+    font-weight: 600;
 }
