@@ -1,13 +1,18 @@
-.btn1{
-    color: white;
-    border: 2px solid #ff8b07;
-    background:  #ff8b07;
-    transition: background-position 1s;
-}
+$colores:(
+   btn1: #ff8b07,
+   btn2: #202020,
+   btn3: #ffc507,
+);
 
-.btn1:hover{
-    color: white;
-    border: 2px solid #ce740e;
-    background:  #ce740e;
-    transition: background-position 1s;
-}
+@each $boton, $color in $colores{
+    .#{$boton}{
+        color: white;
+        border: 2px solid #{$color};
+        background:  #{$color};
+        transition: 0.5s;
+        &:hover{
+            @extend .#{$boton};
+            filter: brightness(80%);
+        }
+    }
+};

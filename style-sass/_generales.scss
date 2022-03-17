@@ -1,7 +1,11 @@
 
+@mixin  size ($width, $height){
+    height: $height;
+    width: $width;
+}
+
 html, body{
-    height: 100%;
-    width: 100%;
+    @include size (100%,100%);
 }
 
 body{
